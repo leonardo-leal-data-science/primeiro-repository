@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <link rel="stylesheet" href="Css/style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="caixa_login">
+        <b>Fazer Login</b><br><br><br>
+        <label for="usuario">Usuário:</label><br>
+        <input autofocus id="usuario"><br><br>
+        <label for="senha">Senha:</label><br>
+        <input type="password" id="senha">
+        <div class="msg_erro" id="erro"></div>
+        <a id="linkhome"><button onclick="entrar()">Entrar</button></a><br>
+        <a href="">Esqueci minha senha</a><br>
+        <a href="cadastro.html">Quero me cadastrar</a>
+    </div>
+</body>
+</html>
+<script>
+    function entrar(){
+        var login_admin = usuario.value == 'Admin' && senha.value == 'Leoleal5020'
+        senha.value = ''
+        usuario.value = ''
+        if (login_admin) {
+           linkhome.href = 'SitePessoal-Home.html' 
+         }/* else if (login_user) {
+
+         }*/
+        else {
+            erro.innerHTML = 'Senha e/ou Usuário inválidos. Tente Novamente'
+         }
+    }
+</script>
